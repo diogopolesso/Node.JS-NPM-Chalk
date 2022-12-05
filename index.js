@@ -17,14 +17,13 @@ async function pegaArquivo(caminhoDoArquivo){
     try {
         const enconding = 'utf-8';
         const texto = await fs.promises.readFile(caminhoDoArquivo, enconding)
-        return extraiLinks(texto);
+        console.log(extraiLinks(texto))
     }   catch(erro){
         trataErro(erro)
     }
 }
 
-//pegaArquivo('./arquivos/texto.md');
-export default pegaArquivo;
+pegaArquivo('./arquivos/texto.md');
 
 
 //Regular Expression:
